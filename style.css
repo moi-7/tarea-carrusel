@@ -103,7 +103,8 @@ img {
   z-index: 3;
 }
 
-.enlaces_primarios {
+.enlaces_primarios,
+.enlaces_secundarios {
   display: flex;
   gap: 0 1rem;
   text-transform: uppercase;
@@ -176,15 +177,6 @@ img {
   display: block;
 }
 
-.enlaces_secundarios {
-  display: flex;
-  gap: 0 1rem;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-
 .menu_hamburguesa {
   display: none;
   flex: 0 0 2.6rem;
@@ -229,13 +221,10 @@ img {
   justify-content: flex-end;
   align-items: flex-start;
   gap: 2rem 0;
-  padding: 2rem;
+  padding-left: 2rem;
 }
 
 .banner_titulo {
-  font-size: 6rem;
-  line-height: 7rem;
-  font-weight: bold;
   font-family: "lexend", sans-serif;
   width: 15ch;
 }
@@ -248,6 +237,7 @@ img {
 
 .contenedor_texto a {
   padding: 1rem 2rem;
+  margin: 1rem 0;
   border-radius: 100vmax;
   background-color: rgba(234, 234, 234, 0.8);
   color: #111;
@@ -257,6 +247,7 @@ img {
     background-color: #0074e8;
     transition: all 0.3s ease;
   }
+
   &:focus-visible {
     color: #f0f0f0;
     background-color: #0074e8;
@@ -264,28 +255,31 @@ img {
   }
 }
 
-/* Media Queries */
+
 
 /* Smaller Viewport */
 
-@media (max-width: 640px) {
+@media (width <=640px) {
   #encabezado {
     padding: 0 2rem;
   }
 
   .nav_contenedor {
     display: none;
-    margin: 0;
+  }
+
+  .menu_hamburguesa {
+    display: block;
   }
 
   #barra_busqueda {
     max-width: 100%;
     transform: translateX(0);
-    padding: .2rem .5rem;
+    padding: .1rem 1rem;
 
     &::placeholder {
       text-transform: uppercase;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       text-align: left;
     }
   }
@@ -312,32 +306,56 @@ img {
   .enlaces_primarios {
     flex-direction: column;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 1rem 0;
     margin-bottom: 1rem;
   }
 
   .menu_contenedor {
     flex-direction: column;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 1rem 0;
   }
 
   .enlaces_secundarios {
     flex-direction: column;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 1rem 0;
+  }
+}
+
+#barra_busqueda {
+  max-width: 100%;
+  transform: translateX(0);
+  padding: .4rem 1rem;
+
+  &::placeholder {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: left;
   }
 }
 
 /* Medium Screen sizes */
 
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (width >=641px) and (width <=835px) {
   #encabezado {
     padding: 0 2rem;
   }
 
   .nav_contenedor {
     display: none;
+  }
+
+  #barra_busqueda {
+    max-width: 100%;
+    transform: translateX(0);
+    padding: .1rem 1rem;
+
+    &::placeholder {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      text-align: left;
+    }
   }
 
   .menu_hamburguesa {
@@ -362,20 +380,20 @@ img {
   .enlaces_primarios {
     flex-direction: column;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 1rem 0;
     margin-bottom: 1rem;
   }
 
   .menu_contenedor {
     flex-direction: column;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 1rem 0;
   }
 
   .enlaces_secundarios {
     flex-direction: column;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 1rem 0;
   }
 
   #barra_busqueda {
@@ -391,8 +409,48 @@ img {
   }
 }
 
+.banner_cta {
+  padding: 0 0 4rem 0;
+}
+
+.contenedor_texto {
+  width: 75%;
+}
+
+.banner_titulo {
+  font-size: 5rem;
+  line-height: 6rem;
+  font-weight: 600;
+}
+
+.banner_subtitulo {
+  font-size: 1.8rem;
+  color: rgba(234, 234, 234, 0.9);
+  width: 60ch;
+}
+
+.contenedor_texto a {
+  padding: 1rem 2rem;
+  border-radius: 100vmax;
+  background-color: rgba(234, 234, 234, 0.8);
+  color: #111;
+
+  &:hover {
+    color: #f0f0f0;
+    background-color: #0074e8;
+    transition: all 0.3s ease;
+  }
+
+  &:focus-visible {
+    color: #f0f0f0;
+    background-color: #0074e8;
+    transition: all 0.3s ease;
+  }
+}
+
 /* Larger Screen sizes */
-@media (min-width: 1025px) {
+
+@media (width >=836px) and (width <=1024px) {
   .menu_hamburguesa {
     display: none;
   }
@@ -401,34 +459,3 @@ img {
     display: flex;
   }
 }
-
-/* Breakpoints */
-/* 
-@media (width <= 640px) {
-  .container {
-    padding: 1rem;
-  }
-}
-
-@media (640px < width <= 1024px) {
-  .container {
-    max-width: 800px;
-    padding: 1.5rem;
-  }
-}
-
-@media (1024px < width <= 1440px) {
-  .container {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-@media (width > 1440px) {
-  .container {
-    max-width: 1600px;
-    gap: 2rem;
-  }
-} */
