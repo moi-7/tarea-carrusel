@@ -90,7 +90,7 @@ img {
   }
 }
 
-#toggle {
+#toggle_menu_hamburguesa {
   display: none;
 }
 
@@ -177,9 +177,14 @@ img {
   display: block;
 }
 
-.menu_hamburguesa {
+.contenedor_hamburguesa {
   display: none;
   flex: 0 0 2.6rem;
+
+  &:focus-visible {
+    outline: 0.2rem solid #0074e8;
+    outline-offset: .2rem;
+  }
 }
 
 .icono_hamburguesa {
@@ -193,7 +198,6 @@ img {
 
 .banner_cta {
   background: url("assets/background.webp") no-repeat center/cover;
-  color: #eaeaea;
   height: calc(100vh - 6rem);
   position: relative;
   padding: 0 0 6rem 0;
@@ -222,6 +226,7 @@ img {
   align-items: flex-start;
   gap: 2rem 0;
   padding-left: 2rem;
+  color: #eaeaea;
 }
 
 .banner_titulo {
@@ -256,8 +261,9 @@ img {
 }
 
 
-
-/* Smaller Viewport */
+/*========================================
+            Smaller Viewport
+=========================================*/
 
 @media (width <=640px) {
   #encabezado {
@@ -268,7 +274,7 @@ img {
     display: none;
   }
 
-  .menu_hamburguesa {
+  .contenedor_hamburguesa {
     display: block;
   }
 
@@ -284,11 +290,11 @@ img {
     }
   }
 
-  .menu_hamburguesa {
+  .contenedor_hamburguesa {
     display: block;
   }
 
-  #toggle:checked~.nav_contenedor {
+  #toggle_menu_hamburguesa:checked~.nav_contenedor {
     display: flex;
     position: absolute;
     top: 6rem;
@@ -321,23 +327,104 @@ img {
     align-items: flex-end;
     gap: 1rem 0;
   }
-}
 
-#barra_busqueda {
-  max-width: 100%;
-  transform: translateX(0);
-  padding: .4rem 1rem;
+  #barra_busqueda {
+    max-width: 100%;
+    transform: translateX(0);
+    padding: .4rem 1rem;
 
-  &::placeholder {
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    text-align: left;
+    &::placeholder {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+
+  .banner_cta {
+    padding: 0 0 4rem 0;
+    background: url("assets/mobile-cover.webp") no-repeat center/cover;
+  }
+
+  .contenedor_texto {
+    width: 75%;
+    gap: .5rem 0;
+  }
+
+  .banner_titulo {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    font-weight: bold;
+  }
+
+  .banner_subtitulo {
+    font-size: 1.4rem;
+    width: 40ch;
+    color: rgba(234, 234, 234, 0.9);
+  }
+
+  .contenedor_texto a {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    color: #111;
+    background-color: rgba(234, 234, 234, 0.8);
+    border-radius: 100vmax;
+
+    &:hover {
+      color: #f0f0f0;
+      background-color: #0074e8;
+      transition: all 0.3s ease;
+    }
+
+    &:focus-visible {
+      color: #f0f0f0;
+      background-color: #0074e8;
+      transition: all 0.3s ease;
+    }
+  }
+
+  #imprescindibles {
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+      font-family: Lexend;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-wrap: pretty;
+      margin-block: 2rem;
+      font-size: 1.5rem;
+    }
+
+    img {
+      aspect-ratio: 2 / 3;
+      height: 40rem;
+      margin: 0 auto;
+    }
+
+    hr {
+      height: .2rem;
+      border: .1rem dotted oklab(24.776% 0 -0.00003 / 0.10);
+      margin: .1rem auto 4rem auto;
+    }
+  }
+
+  footer p {
+    font-size: 1rem;
+    color: #212121;
+    text-align: center;
+    max-width: 100%;
+    margin: 2rem 0 0 0;
   }
 }
 
-/* Medium Screen sizes */
-
-@media (width >=641px) and (width <=835px) {
+/*========================================
+            Medium Viewport
+=========================================*/
+/* 
+@media (width >= 641px) and (width <= 835px) {
   #encabezado {
     padding: 0 2rem;
   }
@@ -358,11 +445,11 @@ img {
     }
   }
 
-  .menu_hamburguesa {
+  .contenedor_hamburguesa {
     display: block;
   }
 
-  #toggle:checked~.nav_contenedor {
+  #toggle_menu_hamburguesa:checked~.nav_contenedor {
     display: flex;
     position: absolute;
     top: 6rem;
@@ -446,16 +533,18 @@ img {
     background-color: #0074e8;
     transition: all 0.3s ease;
   }
-}
+} */
 
-/* Larger Screen sizes */
+/*========================================
+            Larger Viewport
+=========================================*/
 
-@media (width >=836px) and (width <=1024px) {
-  .menu_hamburguesa {
+/* @media (width >=836px) and (width <=1024px) {
+  .contenedor_hamburguesa {
     display: none;
   }
 
   .nav_contenedor {
     display: flex;
   }
-}
+} */
