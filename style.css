@@ -7,8 +7,8 @@
 }
 
 @font-face {
-  font-family: "Dangrek";
-  src: url("assets/fonts/Dangrek.ttf") format("truetype");
+  font-family: "Lexend";
+  src: url("assets/fonts/Lexend.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -62,7 +62,7 @@ img {
   height: auto;
 }
 
-/* Header Styles */
+/* Sección Encabezado */
 
 #encabezado {
   max-width: 100%;
@@ -90,12 +90,10 @@ img {
   }
 }
 
-/* Hide checkbox */
 #toggle {
   display: none;
 }
 
-/* Navigation Container */
 .nav_contenedor {
   display: flex;
   align-items: center;
@@ -186,7 +184,7 @@ img {
   font-weight: bold;
 }
 
-/* Hamburger Menu */
+
 .menu_hamburguesa {
   display: none;
   flex: 0 0 2.6rem;
@@ -198,14 +196,15 @@ img {
   cursor: pointer;
 }
 
-/* Section de Contenido */
+
+/* Sección de Contenido */
 
 .banner_cta {
   background: url("assets/background.webp") no-repeat center/cover;
   color: #eaeaea;
   height: calc(100vh - 6rem);
   position: relative;
-  padding: 0 0 8rem 0;
+  padding: 0 0 6rem 0;
 }
 
 .banner_cta::before {
@@ -225,6 +224,7 @@ img {
   height: 100%;
   position: relative;
   z-index: 2;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: flex-start;
@@ -233,26 +233,32 @@ img {
 }
 
 .banner_titulo {
-  font-size: 3.5rem;
+  font-size: 6rem;
+  line-height: 7rem;
   font-weight: bold;
-  font-family: "Dangrek", sans-serif;
-  text-wrap: pretty;
-  width: 18ch;
+  font-family: "lexend", sans-serif;
+  width: 15ch;
 }
 
 .banner_subtitulo {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: rgba(234, 234, 234, 0.9);
-  width: 38ch;
+  width: 60ch;
 }
 
 .contenedor_texto a {
   padding: 1rem 2rem;
   border-radius: 100vmax;
-  background-color: #eaeaea;
+  background-color: rgba(234, 234, 234, 0.8);
+  color: #111;
 
   &:hover {
-    color: white;
+    color: #f0f0f0;
+    background-color: #0074e8;
+    transition: all 0.3s ease;
+  }
+  &:focus-visible {
+    color: #f0f0f0;
     background-color: #0074e8;
     transition: all 0.3s ease;
   }
