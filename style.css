@@ -100,17 +100,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 1;
-  margin-left: 4rem;
+  flex: 1 0 auto;
+  margin-left: 2rem;
   z-index: 3;
 }
 
 .enlaces_primarios {
   display: flex;
-  gap: 2rem;
+  gap: 0 1rem;
   text-transform: uppercase;
-  font-size: 1.3rem;
-  letter-spacing: 0.18rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -133,13 +132,15 @@ img {
   appearance: none;
   display: none;
 
-  &:focus {
+  &:focus-visible {
     outline: 0.2rem solid #0074e8;
     border: none;
   }
 
   &::placeholder {
     text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #212121;
   }
 
   &::-webkit-search-cancel-button {
@@ -154,29 +155,34 @@ img {
 }
 
 .icono_buscar_contenedor {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  &:focus-visible {
+    outline: 0.2rem solid #0074e8;
+    outline-offset: .2rem;
+  }
 }
 
 #buscar_toggle {
   display: none;
 }
 
-#buscar_toggle:checked ~ #barra_busqueda {
-  display: block;
+.icono_buscar {
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
 }
 
-.icono_buscar_contenedor {
-  cursor: pointer;
-  z-index: 999;
+#buscar_toggle:checked~#barra_busqueda {
+  display: block;
 }
 
 .enlaces_secundarios {
   display: flex;
-  gap: 2rem;
+  gap: 0 1rem;
   text-transform: uppercase;
-  font-size: 1.3rem;
-  letter-spacing: 0.18rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -258,7 +264,7 @@ img {
 
 @media (max-width: 640px) {
   #encabezado {
-    padding: 1rem;
+    padding: 0 2rem;
   }
 
   .nav_contenedor {
@@ -269,48 +275,7 @@ img {
   #barra_busqueda {
     max-width: 100%;
     transform: translateX(0);
-  }
-
-  .menu_hamburguesa {
-    display: block;
-  }
-
-  #toggle:checked ~ .nav_contenedor {
-    display: flex;
-    position: absolute;
-    top: 6rem;
-    right: 0;
-    background-color: #f0f0f0;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 1rem;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .enlaces_primarios {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .menu_contenedor {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-    position: relative;
-  }
-
-  .enlaces_secundarios {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  #barra_busqueda {
-    max-width: fit-content;
+    padding: .2rem .5rem;
 
     &::placeholder {
       text-transform: uppercase;
@@ -319,15 +284,52 @@ img {
     }
   }
 
-  .icono_buscar input {
-    width: 100%;
+  .menu_hamburguesa {
     display: block;
+  }
+
+  #toggle:checked~.nav_contenedor {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    max-width: fit-content;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: .4rem;
+  }
+
+  .enlaces_primarios {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu_contenedor {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .enlaces_secundarios {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
   }
 }
 
 /* Medium Screen sizes */
 
-@media (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
+  #encabezado {
+    padding: 0 2rem;
+  }
+
   .nav_contenedor {
     display: none;
   }
@@ -336,7 +338,7 @@ img {
     display: block;
   }
 
-  #toggle:checked ~ .nav_contenedor {
+  #toggle:checked~.nav_contenedor {
     display: flex;
     position: absolute;
     top: 6rem;
@@ -347,7 +349,8 @@ img {
     align-items: flex-end;
     margin: 1rem;
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: .4rem;
   }
 
   .enlaces_primarios {
@@ -372,17 +375,13 @@ img {
   #barra_busqueda {
     max-width: 100%;
     transform: translateX(0);
+    padding: .4rem 1rem;
 
     &::placeholder {
       text-transform: uppercase;
       font-size: 1.2rem;
       text-align: left;
     }
-  }
-
-  .icono_buscar input {
-    width: 100%;
-    display: block;
   }
 }
 
@@ -396,6 +395,7 @@ img {
     display: flex;
   }
 }
+
 /* Breakpoints */
 /* 
 @media (width <= 640px) {
