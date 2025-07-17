@@ -1,18 +1,18 @@
-/* Fuentes impotadas localmente */
+/* Fuentes importadas localmente */
 
 @font-face {
   font-family: "Roboto Slab";
-  src: url("assets/fonts/Roboto-Slab.ttf") format("ttf-variations");
+  src: url("assets/fonts/Roboto-Slab.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Dangrek";
-  src: url("assets/fonts/Dangrek.ttf") format("ttf-variations");
+  src: url("assets/fonts/Dangrek.ttf") format("truetype");
   font-display: swap;
 }
 
-/* Estilos Gloables */
+/* Estilos Globales */
 
 *,
 *::before,
@@ -20,7 +20,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 1px solid rebeccapurple; */
 }
 
 html {
@@ -31,10 +30,10 @@ html {
 body {
   font-family: "Roboto Slab", sans-serif;
   color: #111;
+  background-color: #e0e0e0;
   font-size: 1.6rem;
   line-height: 1.5;
-  width: 100vw;
-  overflow-x: hidden;
+  max-width: 100%;
 }
 
 ul {
@@ -63,51 +62,27 @@ img {
   height: auto;
 }
 
-/*--------------Estilos Globales--------------*/
-
-/* Clases de utilidad */
-
-.flex {
-  display: flex;
-  align-items: center;
-}
-
-.block {
-  display: block;
-}
-
-.translate {
-  transform: translateX(5rem);
-}
-
-/*--------------Clases de utilidad--------------*/
+/* Header Styles */
 
 #encabezado {
-  width: 100vw;
-  height: 6rem;
-  background-color: red;
-}
-
-nav {
+  max-width: 100%;
   height: 6rem;
   background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  letter-spacing: 0.1.8rem;
-  font-weight: bold;
   padding: 0 2rem;
-
-  a:hover {
-    color: #0074e8;
-  }
+  position: relative;
 }
 
 .isotipo {
+  flex: 0 0 4rem;
+}
+
+.isotipo img {
   width: 4rem;
   height: 4rem;
   cursor: pointer;
-  margin-right: 4rem;
 
   &:hover {
     transform: rotate(35deg) scale(1.2);
@@ -115,56 +90,109 @@ nav {
   }
 }
 
-.navlinks {
-  gap: 0 2rem;
+/* Hide checkbox */
+#toggle {
+  display: none;
 }
 
-form {
-  gap: 0 2rem;
+/* Navigation Container */
+.nav_contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 4rem;
+  z-index: 3;
+}
 
-  input {
-    all: unset;
-    border: 0.1rem solid rgba(0, 0, 0, 0.5);
-    border-radius: 2.5rem;
-    overflow: hidden;
-    padding: 0.6rem 1.5rem;
-    display: none;
-    transition: all 0.2s ease-in-out;
+.enlaces_primarios {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.18rem;
+  font-weight: bold;
+}
 
-    &:focus {
-      border: 0.2rem solid #0074e8;
-      text-transform: none;
-    }
+.menu_contenedor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
 
-    &::placeholder {
-      text-transform: uppercase;
-    }
+#barra_busqueda {
+  all: unset;
+  outline: 0.1rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 2.5rem;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(5rem);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+
+  &:focus {
+    outline: 0.2rem solid #0074e8;
+    border: none;
+  }
+
+  &::placeholder {
+    text-transform: uppercase;
+  }
+
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 
-.searchtbn img {
+.icono_buscar_contenedor {
   width: 2.2rem;
   height: 2.2rem;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
 }
 
-.auth {
-  padding-left: 4rem;
-  gap: 0 2rem;
-}
-
-.menu {
-  cursor: pointer;
-}
-
-.menu img {
-  width: 2.6rem;
-  height: 2.6rem;
-  margin-left: 2rem;
+#buscar_toggle {
   display: none;
 }
+
+#buscar_toggle:checked ~ #barra_busqueda {
+  display: block;
+}
+
+.icono_buscar_contenedor {
+  cursor: pointer;
+  z-index: 999;
+}
+
+.enlaces_secundarios {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.18rem;
+  font-weight: bold;
+}
+
+/* Hamburger Menu */
+.menu_hamburguesa {
+  display: none;
+  flex: 0 0 2.6rem;
+}
+
+.icono_hamburguesa {
+  width: 2.6rem;
+  height: 2.6rem;
+  cursor: pointer;
+}
+
+/* Section de Contenido */
 
 .banner_cta {
   background: url("assets/background.webp") no-repeat center/cover;
@@ -190,7 +218,7 @@ form {
   width: 50%;
   height: 100%;
   position: relative;
-  z-index: 999;
+  z-index: 2;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: flex-start;
@@ -224,100 +252,150 @@ form {
   }
 }
 
-#imprescindibles {
-  padding: 2rem;
-  text-align: center;
-  background: url("assets/fondo-lista-comics2.png") no-repeat center/cover;
-  color: #000;
-  font-size: 1.6rem;
-}
+/* Media Queries */
 
-.lista_de_comics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 0 2rem;
-
-  img {
-    width: 35rem;
-    height: auto;
-    padding-block: 4rem;
-  }
-}
-
-footer {
-  text-align: center;
-}
-
-/* Pantallas pequeñas */
+/* Smaller Viewport */
 
 @media (max-width: 640px) {
-  nav {
+  #encabezado {
     padding: 1rem;
   }
 
-  .menu img {
-    margin-left: 1rem;
+  .nav_contenedor {
+    display: none;
+    margin: 0;
   }
 
-  .banner_cta {
-    background: url("assets/mobile-cover.webp") no-repeat cover;
+  #barra_busqueda {
+    max-width: 100%;
+    transform: translateX(0);
   }
 
-  .contenedor_texto {
-    gap: 1.5rem 0;
+  .menu_hamburguesa {
+    display: block;
   }
 
-  .contenedor_texto a {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.4rem;
+  #toggle:checked ~ .nav_contenedor {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  .contenedor_texto {
+  .enlaces_primarios {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu_contenedor {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
     width: 100%;
+    position: relative;
   }
 
-  .banner_titulo {
-    font-size: 2.4rem;
+  .enlaces_secundarios {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
-  .banner_subtitulo {
-    font-size: 1.4rem;
-  }
+  #barra_busqueda {
+    max-width: fit-content;
 
-  #imprescindibles {
-    padding: 1rem;
-  }
-
-  .lista_de_comics {
-    grid-template-columns: 1fr;
-    grid-template-rows: fit-content;
-
-    img {
-      width: 28rem;
-      height: 50rem;
-      place-self: center;
-      margin: 0 auto;
-      /* fallback for Firefox */
+    &::placeholder {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      text-align: left;
     }
   }
-}
-/*--------------Pantallas pequeñas--------------*/
 
-@media (width <=1024px) {
-  .navlinks {
-    display: none;
-  }
-
-  .auth {
-    display: none;
-  }
-
-  .menu img {
+  .icono_buscar input {
+    width: 100%;
     display: block;
   }
 }
 
+/* Medium Screen sizes */
+
+@media (max-width: 1024px) {
+  .nav_contenedor {
+    display: none;
+  }
+
+  .menu_hamburguesa {
+    display: block;
+  }
+
+  #toggle:checked ~ .nav_contenedor {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    width: fit-content;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .enlaces_primarios {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu_contenedor {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .enlaces_secundarios {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  #barra_busqueda {
+    max-width: 100%;
+    transform: translateX(0);
+
+    &::placeholder {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      text-align: left;
+    }
+  }
+
+  .icono_buscar input {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Larger Screen sizes */
+@media (min-width: 1025px) {
+  .menu_hamburguesa {
+    display: none;
+  }
+
+  .nav_contenedor {
+    display: flex;
+  }
+}
 /* Breakpoints */
 /* 
 @media (width <= 640px) {

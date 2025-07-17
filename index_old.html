@@ -3,64 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="script.js" defer></script>
+    <title>DC</title>
   </head>
   <body>
     <header id="encabezado">
-      <div class="isotipo">
-        <img src="assets/isotipo.png" alt="Isotipo de DC comics" />
-      </div>
+      <nav class="nav_contenedor flex">
+        
+        <div class="flex">
 
-      <input
-        type="checkbox"
-        name="toggle"
-        id="toggle"
-        role="checkbox"
-        tabindex="0"
-      />
-      <nav class="nav_contenedor">
-        <ul class="enlaces_primarios">
-          <li><a href="#" tabindex="0">Comics</a></li>
-          <li><a href="#" tabindex="0">Personajes</a></li>
-          <li><a href="#" tabindex="0">Cine Y TV</a></li>
-          <li><a href="#" tabindex="0">Noticias</a></li>
-        </ul>
+          <a href="index.html">
+            <img
+              class="isotipo"
+              src="assets/isotipo.png"
+              alt="Logo de Detective comics, una editorial de comics estadounidense"
+            />
+          </a>
 
-        <div class="menu_contenedor">
-          <input type="checkbox" name="buscar_toggle" id="buscar_toggle"
-      role="checkbox" tabindex="0" />
-
-          <input type="search" name="buscar" id="barra_busqueda" tabindex="0" placeholder="Buscar Comics..."/>
-
-
-          <div class="icono_buscar_contenedor">
-            <label for="buscar_toggle">
-              <img src="assets/search.svg" alt="Icono de búsqueda" class="icono_buscar"/>
-            </label>
-          </div>
-
-          <ul class="enlaces_secundarios">
-            <li><a href="#" tabindex="0">Registrarse</a></li>
-            <li><a href="#" tabindex="0">Ingresar</a></li>
+          <input type="checkbox" name="hamburge" id="hamburger" />
+          <ul class="flex navlinks">
+            <li><a href="#">Comics</a></li>
+            <li><a href="#">Personajes</a></li>
+            <li><a href="#">Cine Y TV</a></li>
+            <li><a href="#">Noticias</a></li>
           </ul>
         </div>
-      </nav>
 
-      <div class="menu_hamburguesa">
-        <label for="toggle">
-          <img
-            src="assets/menu.svg"
-            alt=""
-            class="icono_hamburguesa"
-            tabindex="0"
-          />
-        </label>
-      </div>
+        <div class= flex">
+          <form role="search" class="flex search">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Buscar…"
+            />
+            <span class="searchtbn">
+              <img src="assets/search.svg" alt="Icono del botón de busqueda" />
+            </span>
+          </form>
+          <ul class="flex auth">
+            <li><a href="#">Registrarse</a></li>
+            <li><a href="#">Acceder</a></li>
+          </ul>
+          <div class="menu">
+            <label for="hamburger">
+              <img src="assets/menu.svg" alt="Icono menu desplegable" />
+            </label>
+          </div>
+        </div>
+
+      </nav>
     </header>
 
-    <main id="contenido">
-      
+    <main>
       <section class="banner_cta">
         <div class="contenedor_texto flex">
           <h1 class="banner_titulo">Descubre el mundo de los comics</h1>
@@ -113,5 +110,8 @@
       </section>
     </main>
 
+    <footer>
+      <p>&copy Tributo a DC comics, página creada sin fines de lucro.</p>
+    </footer>
   </body>
 </html>
