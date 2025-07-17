@@ -29,8 +29,8 @@ html {
 
 body {
   font-family: "Roboto Slab", sans-serif;
-  color: #111;
-  background-color: #e0e0e0;
+  color: oklab(17.764% 0 -0.00002);
+  background-color: oklab(90.67% 0 -0.0001);
   font-size: 1.6rem;
   line-height: 1.5;
   max-width: 100%;
@@ -42,16 +42,16 @@ ul {
 
 a {
   text-decoration: none;
-  color: #212121;
+  color: oklab(24.776% 0 -0.00003);
   transition: all 0.3s ease-in-out;
   display: inline-block;
 
   &:hover {
-    color: #0074e8;
+    color: oklab(57.303000000000004% -0.0472 -0.19042);
   }
 
   &:focus-visible {
-    color: #0074e8;
+    color: oklab(57.303000000000004% -0.0472 -0.19042);
     outline: none;
   }
 }
@@ -67,7 +67,7 @@ img {
 #encabezado {
   max-width: 100%;
   height: 6rem;
-  background-color: #f0f0f0;
+  background-color: oklab(95.514% 0 -0.00011);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,7 +139,7 @@ img {
   &::placeholder {
     text-transform: uppercase;
     font-size: 1.2rem;
-    color: #212121;
+    color: oklab(24.776% 0 -0.00003);
   }
 
   &::-webkit-search-cancel-button {
@@ -193,14 +193,13 @@ img {
   cursor: pointer;
 }
 
-
 /* Sección de Contenido */
 
 .banner_cta {
   background: url("assets/background.webp") no-repeat center/cover;
   height: calc(100vh - 6rem);
   position: relative;
-  padding: 0 0 6rem 0;
+  padding: 0 0 5rem 0;
 }
 
 .banner_cta::before {
@@ -226,40 +225,60 @@ img {
   align-items: flex-start;
   gap: 2rem 0;
   padding-left: 2rem;
-  color: #eaeaea;
+  color: oklab(93.705% 0 -0.00011);
 }
 
 .banner_titulo {
-  font-family: "lexend", sans-serif;
   width: 15ch;
+  font-family: "lexend", sans-serif;
+  font-size: 6rem;
+  line-height: 1.2;
+
 }
 
 .banner_subtitulo {
   font-size: 1.8rem;
-  color: rgba(234, 234, 234, 0.9);
-  width: 60ch;
+  color: rgba(234, 234, 234, 0.8);
+  width: 50ch;
 }
 
 .contenedor_texto a {
   padding: 1rem 2rem;
   margin: 1rem 0;
   border-radius: 100vmax;
-  background-color: rgba(234, 234, 234, 0.8);
-  color: #111;
+  background-color: oklab(93.705% 0 -0.00011 / 0.85);
+  color: oklab(17.764% 0 -0.00002);
 
   &:hover {
-    color: #f0f0f0;
-    background-color: #0074e8;
+    color: oklab(95.514% 0 -0.00011);
+    background-color: oklab(57.303000000000004% -0.0472 -0.19042);
     transition: all 0.3s ease;
   }
 
   &:focus-visible {
-    color: #f0f0f0;
-    background-color: #0074e8;
+    color: oklab(95.514% 0 -0.00011);
+    background-color: oklab(57.303000000000004% -0.0472 -0.19042);
     transition: all 0.3s ease;
   }
 }
 
+  #imprescindibles {
+
+     h2 {
+    }
+
+    p {
+    }
+
+    img {
+    }
+
+    hr {
+    }
+  }
+
+  footer p {
+  }
 
 /*========================================
             Smaller Viewport
@@ -300,7 +319,7 @@ img {
     top: 6rem;
     right: 0;
     max-width: fit-content;
-    background-color: #f0f0f0;
+    background-color: oklab(95.514% 0 -0.00011);
     flex-direction: column;
     align-items: flex-end;
     margin: 1rem;
@@ -342,7 +361,6 @@ img {
 
   .banner_cta {
     padding: 0 0 4rem 0;
-    background: url("assets/mobile-cover.webp") no-repeat center/cover;
   }
 
   .contenedor_texto {
@@ -352,32 +370,32 @@ img {
 
   .banner_titulo {
     font-size: 2.5rem;
-    line-height: 4rem;
+    line-height: 1.4;
     font-weight: bold;
   }
 
   .banner_subtitulo {
     font-size: 1.4rem;
     width: 40ch;
-    color: rgba(234, 234, 234, 0.9);
+    color: oklab(93.705% 0 -0.00011 / 0.9);
   }
 
   .contenedor_texto a {
     font-size: 1.2rem;
     padding: 1rem 2rem;
-    color: #111;
-    background-color: rgba(234, 234, 234, 0.8);
+    color: oklab(17.764% 0 -0.00002);
+    background-color: oklab(93.705% 0 -0.00011 / 0.8);
     border-radius: 100vmax;
 
     &:hover {
-      color: #f0f0f0;
-      background-color: #0074e8;
+      color: oklab(95.514% 0 -0.00011);
+      background-color: oklab(57.303000000000004% -0.0472 -0.19042);
       transition: all 0.3s ease;
     }
 
     &:focus-visible {
-      color: #f0f0f0;
-      background-color: #0074e8;
+      color: oklab(95.514% 0 -0.00011);
+      background-color: oklab(57.303000000000004% -0.0472 -0.19042);
       transition: all 0.3s ease;
     }
   }
@@ -386,10 +404,11 @@ img {
     padding: 2rem;
     text-align: center;
 
-    h2 {
+     h2 {
       font-family: Lexend;
       margin-bottom: 2rem;
       text-transform: uppercase;
+      font-size: 2.4rem;
     }
 
     p {
@@ -413,7 +432,7 @@ img {
 
   footer p {
     font-size: 1rem;
-    color: #212121;
+    color: oklab(24.776% 0 -0.00003);
     text-align: center;
     max-width: 100%;
     margin: 2rem 0 0 0;
@@ -424,7 +443,7 @@ img {
             Medium Viewport
 =========================================*/
 /* 
-@media (width >= 641px) and (width <= 835px) {
+@media (width >=641px) and (width <=835px) {
   #encabezado {
     padding: 0 2rem;
   }
@@ -494,57 +513,57 @@ img {
       text-align: left;
     }
   }
-}
 
-.banner_cta {
-  padding: 0 0 4rem 0;
-}
-
-.contenedor_texto {
-  width: 75%;
-}
-
-.banner_titulo {
-  font-size: 5rem;
-  line-height: 6rem;
-  font-weight: 600;
-}
-
-.banner_subtitulo {
-  font-size: 1.8rem;
-  color: rgba(234, 234, 234, 0.9);
-  width: 60ch;
-}
-
-.contenedor_texto a {
-  padding: 1rem 2rem;
-  border-radius: 100vmax;
-  background-color: rgba(234, 234, 234, 0.8);
-  color: #111;
-
-  &:hover {
-    color: #f0f0f0;
-    background-color: #0074e8;
-    transition: all 0.3s ease;
+  .banner_cta {
+    padding: 0 0 4rem 0;
   }
 
-  &:focus-visible {
-    color: #f0f0f0;
-    background-color: #0074e8;
-    transition: all 0.3s ease;
+  .contenedor_texto {
+    width: 75%;
+    color: yellow;
+  }
+
+  .banner_titulo {
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: 600;
+  }
+
+  .banner_subtitulo {
+    font-size: 1.8rem;
+    color: rgba(234, 234, 234, 0.9);
+    width: 60ch;
+  }
+
+  .contenedor_texto a {
+    padding: 1rem 2rem;
+    border-radius: 100vmax;
+    background-color: rgba(234, 234, 234, 0.8);
+    color: #111;
+
+    &:hover {
+      color: #f0f0f0;
+      background-color: #0074e8;
+      transition: all 0.3s ease;
+    }
+
+    &:focus-visible {
+      color: #f0f0f0;
+      background-color: #0074e8;
+      transition: all 0.3s ease;
+    }
   }
 } */
+
 
 /*========================================
             Larger Viewport
 =========================================*/
 
-/* @media (width >=836px) and (width <=1024px) {
-  .contenedor_hamburguesa {
-    display: none;
-  }
+@media (width >=836px) and (width <=1024px) {}
 
-  .nav_contenedor {
-    display: flex;
-  }
-} */
+/*========================================
+            Largest Viewport
+=========================================*/
+
+@media (width >=1440px) {}
