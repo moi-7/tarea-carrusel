@@ -1,16 +1,17 @@
 /* Fuentes importadas localmente */
 
 @font-face {
+  font-family: "Lexend";
+  src: url("assets/fonts/Lexend.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Roboto Slab";
   src: url("assets/fonts/Roboto-Slab.ttf") format("truetype");
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Lexend";
-  src: url("assets/fonts/Lexend.ttf") format("truetype");
-  font-display: swap;
-}
 
 /* Estilos Globales */
 

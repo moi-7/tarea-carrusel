@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="assets/fonts/Lexend.ttf" as="font" type="font/ttf"> <!--Cambio implementado-->
+    <link rel="preload" href="assets/fonts/Roboto-Slab.ttf" as="font" type="font/ttf"> <!--Cambio implementado-->
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>     <!-- Necesita Cambio -->
+    <title>Tributo a DC</title> <!--Cambio implementado-->
   </head>
   <body>
     <header id="encabezado">
 
-      <div class="isotipo">     <!-- Necesita Cambio -->
-        <img src="assets/isotipo.png" alt="Isotipo de DC comics"></img>
+      <div class="isotipo_contenedor"> <!--Cambio implementado-->
+        <img src="assets/isotipo.webp" alt="Isotipo de DC comics"></img>
       </div>
 
       <nav class="nav_contenedor">
@@ -23,17 +25,13 @@
         </ul>
 
         <div class="menu_contenedor">
-          <input type="checkbox" name="buscar_toggle" id="buscar_toggle" role="checkbox" />     <!-- Necesita Cambio -->
+          <input type="checkbox" name="buscar_interruptor" id="buscar_interruptor" role="checkbox" hidden></input> <!--Cambio implementado-->
 
-          <input type="search" name="buscar" id="barra_busqueda" tabindex="0" placeholder="Buscar Comics..." /> <!-- Necesita Cambio -->
+          <input type="search" name="barra_busqueda" id="barra_busqueda" tabindex="0" placeholder="Buscar Comics..."></input> <!--Cambio implementado-->
 
           <div class="icono_buscar_contenedor" tabindex="0">
-            <label for="buscar_toggle">
-              <img
-                src="assets/search.svg"
-                alt="Icono de búsqueda"
-                class="icono_buscar"
-              /> <!-- Necesita Cambio -->
+            <label for="buscar_interruptor"> <!--Cambio implementado-->
+              <img src="assets/search.svg" alt="Icono de búsqueda" class="icono_buscar" aria-hidden="true"></img> <!--Cambio implementado-->
             </label>
           </div>
 
@@ -45,12 +43,11 @@
         </div>
       </nav>
 
-      <div class="contenedor_hamburguesa" tabindex="0"> <!-- Necesita Cambio -->
-        <label for="toggle_menu_hamburguesa"> <!-- Necesita Cambio -->
-          <input type="checkbox" name="toggle_menu_hamburguesa" id="toggle_menu_hamburguesa" role="checkbox" />  <!-- Necesita Cambio -->
-          <img src="assets/menu.svg" alt="" class="icono_hamburguesa"/> <!-- Necesita Cambio -->
+        <label for="menu_hamburguesa_interruptor" class="contenedor_icono_hamburguesa" tabindex="0"> <!--Cambio implementado-->
+          <input type="checkbox" name="menu_hamburguesa_interruptor" id="menu_hamburguesa_interruptor" role="checkbox" hidden></input> <!--Cambio implementado-->
+
+          <img src="assets/menu.svg" alt="" class="icono_hamburguesa" aria-hidden="true"></img> <!--Cambio implementado-->
         </label>
-      </div>
     </header>
 
     <main id="contenido">
