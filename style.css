@@ -262,23 +262,31 @@ img {
   }
 }
 
-  #imprescindibles {
+#imprescindibles {
+  padding: 2rem;
+  text-align: center;
 
-     h2 {
-    }
 
-    p {
-    }
-
-    img {
-    }
-
-    hr {
-    }
+  h2 {
+    font-family: Lexend;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 20rem 0 5rem 0;
   }
 
-  footer p {
+  p {
+    font-size: 2rem;
+    text-wrap: pretty;
+    margin: 0 0 5rem 0;
   }
+
+  img {}
+
+  hr {}
+
+}
+
+footer p {}
 
 /*========================================
             Smaller Viewport
@@ -404,10 +412,10 @@ img {
     padding: 2rem;
     text-align: center;
 
-     h2 {
+    h2 {
       font-family: Lexend;
-      margin-bottom: 2rem;
       text-transform: uppercase;
+      margin: 0 0 0 0;
       font-size: 2.4rem;
     }
 
