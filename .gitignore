@@ -42,3 +42,5 @@ node_modules/
 # Build directories
 dist/
 build/
+# git files
+.git
