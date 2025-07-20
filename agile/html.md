@@ -1,9 +1,9 @@
 ### Lista de tareas del documento HTML
 
-- [x] Sprint 1
-  - [x] Revisar la semantía y estructura del documento HTML
-  - [x] Comprender que cambios hacer a la estructura del documento
-  - [x] Crear punto de retorno en GIT antes de modificar el documento
+- [] Sprint 1
+  - [] Revisar la semantía y estructura del documento HTML
+  - [] Comprender que cambios hacer a la estructura del documento
+  - [] Crear punto de retorno en GIT antes de modificar el documento
 
 - [ ] Sprint 2
 	 ## Sección Header
@@ -19,7 +19,6 @@
   - [x] Cerrar etiqueta de la imagen con la clase "icono_buscar"
   - [x] Cambiar el nombre de la clase del contenedor del icono hamburguesa a "contenedor_icono_hamburguesa"
   - [x] Cambiar el nombre del atributo "for" de la etiqueta label a "menu_hamburguesa_interruptor"
-  - [x] Eliminar etiqueta div con la clase "contenedor_icono_hamburguesa" y usar etiqueta label como padre
   - [x] Cerrar la etiqueta input con el ID menu_hamburguesa_interruptor
   - [x] Cambiar el nombre del atributo y el ID del Input a "menu_hamburguesa_interruptor"
   - [x] Cerrar etiqueta img con la clase "icono hamburguesa"
