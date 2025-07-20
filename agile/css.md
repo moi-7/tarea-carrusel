@@ -25,7 +25,14 @@
    ## Sección Main
   - [x] Incrementar "margin top" a la etiqueta "h2" dentro de la sección "imprescindibles" para pantallas pequeñas
   - [x] Cambio de color al botón y los estados de "focus visible y hover"
-  - [x] Decremento de "margin-top" a la etiqueta "h2" de la sección de "imprescindibles" para pantallas pequeñas
+  - [x] Disminución de "margin-top" a la etiqueta "h2" de la sección de "imprescindibles" para pantallas pequeñas
+  - [x] Agregar selección para la etiqueta div con la clase ".one" a la sección de pantallas pequeñas con la declaración "display: blcok"
+  - [x] Cambiar selección a la etiqueta "h2" que se encuentra déspues de la etiqueta "section" con el ID "imprescindibles" a "imprescindibles_titulo"
+  - [x] Cambiar selección a la etiqueta "p"que se encuentra déspues de la etiqueta "section" con el ID "imprescindibles" a "imprescindibles_texto"
+  - [x] Agregar la propiedad con el valor "text-align: center" a la etiqueta "h2" con la clase "imprescindibles_titulo"
+  - [x] Disminuir "margin-bottom" a la etiqueta "h2" con la clase "imprescindibles_titulo"
+  - [x] Cambio estético y de redacción a las etiquetas "h2" y "p" que se encuentra déspues de la etiqueta "section" con el ID "imprescindibles"
+  - [x] Cambiar selección por medio de "nesting" a las etiquetas "h2" y "p" que se encuentra déspues de la etiqueta "section" con el ID "imprescindibles"
 
 - [ ] Sprint 3
   - [ ] Buscar errores o cambios no intencionales que alteren el diseño de la página web

@@ -36,6 +36,9 @@
   - [x] Cerrar etiqueta "hr" situada debajo del cómic flashpoint
   - [x] Cerrar etiqueta "img" que contiene la imagen de la muerte de Superman
   - [x] Agregar ID con el nombre "pie_de_pagina" a la etiqueta "footer"
+  - [x] Agregar clase con el nombre "imprescindibles_titulo" a la etiqueta "h2" luego de la etiqueta "section" con el ID "imprescindibles"
+  - [x] Agregar clase con el nombre "imprescindibles_texto" a la etiqueta "p" luego de la etiqueta "section" con el ID "imprescindibles"
+
 
 - [ ] Sprint 3
   - [ ] Buscar errores o cambios no intencionales que alteren el diseño de la página web
