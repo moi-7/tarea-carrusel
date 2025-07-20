@@ -33,6 +33,7 @@
   - [x] Disminuir "margin-bottom" a la etiqueta "h2" con la clase "imprescindibles_titulo"
   - [x] Cambio estético y de redacción a las etiquetas "h2" y "p" que se encuentra déspues de la etiqueta "section" con el ID "imprescindibles"
   - [x] Cambiar selección por medio de "nesting" a las etiquetas "h2" y "p" que se encuentra déspues de la etiqueta "section" con el ID "imprescindibles"
+  - [] Crear selección global para eliminar "overflow" de todos los cuadros de texto.
 
 - [ ] Sprint 3
   - [ ] Buscar errores o cambios no intencionales que alteren el diseño de la página web
