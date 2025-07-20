@@ -76,11 +76,13 @@ img {
   position: relative;
 }
 
-.isotipo { /* Necesita Cambio */
+.isotipo_contenedor {
+  /* Cambio implementado */
   flex: 0 0 4rem;
 }
 
-.isotipo img { /* Necesita Cambio */
+.isotipo_contenedor img {
+  /* Cambio implementado */
   width: 4rem;
   height: 4rem;
   cursor: pointer;
@@ -89,10 +91,6 @@ img {
     transform: rotate(35deg) scale(1.2);
     transition: all 0.3s ease-in-out;
   }
-}
-
-#toggle_menu_hamburguesa { /* Necesita Cambio */
-  display: none;
 }
 
 .nav_contenedor {
@@ -164,21 +162,19 @@ img {
   }
 }
 
-#buscar_toggle { /* Necesita Cambio */
-  display: none;
-}
-
 .icono_buscar {
   position: relative;
   z-index: 5;
   cursor: pointer;
 }
 
-#buscar_toggle:checked~#barra_busqueda { /* Necesita Cambio */
+#buscar_interruptor:checked~#barra_busqueda {
+  /* Cambio implementado */
   display: block;
 }
 
-.contenedor_hamburguesa { /* Necesita Cambio */
+.contenedor_icono_hamburguesa {
+  /* Cambio implementado */
   display: none;
   flex: 0 0 2.6rem;
 
@@ -265,6 +261,7 @@ img {
 
 #imprescindibles {
   /* padding: 0 2rem; */
+  /* Necesita Cambio */
   text-align: center;
 
 
@@ -291,24 +288,21 @@ img {
   max-width: 270rem;
   outline: 1px solid red;
 
-  article {
-  }
+  article {}
 
   img {
     aspect-ratio: 2 / 3;
     object-fit: contain;
   }
-  
-  hr{
+
+  hr {
     display: none;
   }
 
-  p{
-    
-  }
+  p {}
 }
 
-.one{
+.one {
   max-width: 90rem;
   display: flex;
   align-items: baseline;
@@ -319,7 +313,7 @@ footer p {}
 
 
 /*========================================
-            Smaller Viewport
+           Pantallas pequeñas
 =========================================*/
 
 @media (width <=640px) {
@@ -331,7 +325,7 @@ footer p {}
     display: none;
   }
 
-  .contenedor_hamburguesa {
+  .contenedor_icono_hamburguesa {
     display: block;
   }
 
@@ -351,7 +345,7 @@ footer p {}
     display: block;
   }
 
-  #toggle_menu_hamburguesa:checked~.nav_contenedor {
+  #menu_hamburguesa_interruptor:checked ~ .nav_contenedor {
     display: flex;
     position: absolute;
     top: 6rem;

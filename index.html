@@ -16,6 +16,8 @@
         <img src="assets/isotipo.webp" alt="Isotipo de DC comics"></img>
       </div>
 
+      <input type="checkbox" name="menu_hamburguesa_interruptor" id="menu_hamburguesa_interruptor" role="checkbox" hidden></input>
+
       <nav class="nav_contenedor">
 
         <ul class="enlaces_primarios">
@@ -44,11 +46,12 @@
         </div>
       </nav>
 
-        <label for="menu_hamburguesa_interruptor" class="contenedor_icono_hamburguesa" tabindex="0"> <!--Cambio implementado-->
-          <input type="checkbox" name="menu_hamburguesa_interruptor" id="menu_hamburguesa_interruptor" role="checkbox" hidden></input> <!--Cambio implementado-->
+        <div class="contenedor_icono_hamburguesa" tabindex="0"> <!--Cambio implementado-->
+          <label for="menu_hamburguesa_interruptor">
+            <img src="assets/menu.svg" alt="" class="icono_hamburguesa" aria-hidden="true" for="menu_hamburguesa_interruptor"></img> <!--Cambio implementado-->
+          </label>
 
-          <img src="assets/menu.svg" alt="" class="icono_hamburguesa" aria-hidden="true"></img> <!--Cambio implementado-->
-        </label>
+        </div>
     </header>
 
     <main id="contenido">
@@ -101,8 +104,9 @@
                 Acero se enfrenta a su mayor desafío.
               </p>
             </article>
+
           </div>
-          </div>
+        </div>
       </section>
     </main>
 
