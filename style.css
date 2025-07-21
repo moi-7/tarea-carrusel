@@ -89,10 +89,10 @@ p, article p{
   width: 4rem;
   height: 4rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: rotate(35deg) scale(1.2);
-    transition: all 0.3s ease-in-out;
   }
 }
 
