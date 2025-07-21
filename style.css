@@ -263,8 +263,14 @@ p, article p{
   }
 }
 
-#imprescindibles {
-  /* padding: 0 2rem; */
+#imprescindibles{
+  position: relative;
+}
+
+.contenedor_interruptor_carrusel{
+  max-width: 100%;
+  padding: 2rem;
+  text-align: center;
 }
 
 .imprescindibles_titulo {
@@ -281,7 +287,6 @@ p, article p{
   text-align: center;
   text-wrap: pretty;
   margin: 0 auto 5rem auto;
-  padding: 0;
   font-weight: 500;
 }
 
@@ -302,6 +307,7 @@ p, article p{
   article p{
     max-width: 30rem;
     text-align: center;
+    font-weight: 500;
   }
 
   hr {
@@ -343,6 +349,16 @@ p, article p{
   grid-template-rows: 1fr;
   column-gap: 2rem;
 }
+
+.lista_de_comics:has(input[type=checkbox]):checked .one {
+  transform: translateX(-100%);
+}
+
+.lista_de_comics{
+  /* background-color: seagreen; */
+  overflow-x: auto;
+}
+
 
 footer p {
     font-size: 1rem;
@@ -583,6 +599,10 @@ footer p {
     column-gap: 2rem;
   }
 
+  .contenedor_interruptor_carrusel{
+    display: none;
+  }
+
   footer p {
     font-size: 1rem;
     color: oklab(24.776% 0 -0.00003);
@@ -796,7 +816,11 @@ footer p {
             Larger Viewport
 =========================================*/
 
-@media (width >=836px) and (width <=1024px) {}
+@media (min-width: 642px) and (max-width: 860px) {
+  .contenedor_interruptor_carrusel{
+    display: none;
+  }
+}
 
 /*========================================
             Largest Viewport
