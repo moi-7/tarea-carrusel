@@ -25,6 +25,7 @@
   - [x] Esconder Inputs de tipo "checkbox" que contengan las clases de interruptor con el atributo "hidden" directamente dentro de la etiqueta en el documento HTML
   - [x] Agregar aria-hidden= "true" en Iconos en formato SVG
   - [x] Reducir tamaño de imagen del isotipo
+  - [] Cambiar nombre de la clase del isologo.
 
    ## Sección Main
   - [x] Remover clase flex de la etiqueta div con la clase "contenedor_texto"
